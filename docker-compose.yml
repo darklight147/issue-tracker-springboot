@@ -1,0 +1,32 @@
+version: "3.1"
+services:
+  backend:
+    image: quasimodo147/issue-tracker-springboot:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - JDBC=postgres
+      - DB_HOST=31.080.166.13
+      - DB_DATABASE=devoirdb
+    networks:
+      - dinde
+
+  db:
+    image: postgres:14-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: PASSWORD
+    networks:
+      - dinde
+    volumes:
+      - persist-pg
+
+  # frontend not yet
+
+networks:
+  dinde:
+
+volumes:
+  persist-pg:
