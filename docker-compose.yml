@@ -6,9 +6,11 @@ services:
       - "8080:8080"
     environment:
       - PORT=8080
-      - JDBC=postgres
-      - DB_HOST=31.080.166.13
-      - DB_DATABASE=devoirdb
+      - JDBC=jdbc:postgresql
+      - DB_HOST=db
+      - DB_DATABASE=postgres
+      - DB_PASSWORD=PASSWORD
+      - DB_USER=postgres
     networks:
       - dinde
 
