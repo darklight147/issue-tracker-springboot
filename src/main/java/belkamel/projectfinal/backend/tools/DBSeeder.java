@@ -33,16 +33,16 @@ public class DBSeeder implements CommandLineRunner {
             aRepo.save(admin);
 
             Client client = new Client();
-            client.setDisplayName("nejm");
-            client.setEmail("nejm@mail.com");
-            client.setPassword(passwordEncoder.encode("nejm"));
+            client.setDisplayName("belkamel");
+            client.setEmail("belkamel@mail.com");
+            client.setPassword(passwordEncoder.encode("belkamel"));
             client.setRole(Values.getRole("client"));
             cRepo.save(client);
         
             Dev dev = new Dev();
-            dev.setDisplayName("ahid");
-            dev.setEmail("ahid@mail.com");
-            dev.setPassword(passwordEncoder.encode("ahid"));
+            dev.setDisplayName("marouane");
+            dev.setEmail("marouane@mail.com");
+            dev.setPassword(passwordEncoder.encode("marouane"));
             dev.setRole(Values.getRole("dev"));
             dRepo.save(dev);
         }
